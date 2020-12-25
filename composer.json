@@ -1,0 +1,14 @@
+{
+    "name": "hamedsz/butylog",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "hamed sahrakhiz",
+            "email": "hamedsahrakhiz2@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"hamedsz\\butylog\\": "src/"}
+    },
+    "require": {}
+}
