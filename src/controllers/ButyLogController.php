@@ -8,9 +8,16 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\UrlWindow;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Env;
 
 class ButyLogController extends Controller
 {
+    public function __construct()
+    {
+        if (Env::get("BUTYLOG") !== true)
+            abort(404);
+    }
+
     public function main()
     {
         $dirs = ButyLog::getAllDirs();
